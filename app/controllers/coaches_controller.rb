@@ -29,6 +29,7 @@ class CoachesController < ApplicationController
   # POST /coaches.json
   def create
     @coach = Coach.new(coach_params)
+    @coach.user = current_user
 
     respond_to do |format|
       if @coach.save
