@@ -1,9 +1,22 @@
-<p id="notice"><%= notice %></p>
+<%- model_class = Coach -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => Coach %></h1>
+</div>
 
-<p>
-  <strong>User:</strong>
-  <%= @coach.user %>
-</p>
+<div class="fieldset">
+  <dl>
+  </dl>
+</div>
 
-<%= link_to 'Edit', edit_coach_path(@coach) %> |
-<%= link_to 'Back', coaches_path %>
+<div class="form-group">
+  <%= link_to t('.back', :default => t("helpers.links.back")),
+              coaches_path, :class => 'btn btn-default'  %>
+  <%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_coach_path(@coach), :class => 'btn btn-default' %>
+  <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              coach_path(@coach),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>
+</div>
+
