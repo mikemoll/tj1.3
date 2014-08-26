@@ -1,0 +1,175 @@
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>The Journal </title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="#"> <img src="http://s24.postimg.org/hhtanpcy9/png.png" alt="Welcome to Mail App" /> UBC Track
+                    </a>
+                </li>
+                <li>
+                  <a href="#"></i>Dashboard</a>
+                </li>
+                <li>
+                    <a href="#"><font>Julia </a>
+                </li>
+                <li>
+                    <a href="#">Michael Moll</a>
+                </li>
+                <li>
+                    <a href="#">Justin Locke</a>
+                </li>
+                <li>
+                    <a href="#">Adam West</a>
+                </li>
+                <li>
+                    <a href="#">Jim Paterson</a>
+                </li>
+                 <li>
+                    <a href="#">Ken Singer</a>
+                </li>
+                <li>
+                    <a href="#">Settings</a>
+                </li>
+                   <img src="http://s24.postimg.org/hhtanpcy9/png.png" alt="Welcome to Mail App" />
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                      <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Hide/Reveal Side-Menu</a>
+                <h1>Workout Creator</h1>
+                     <ul class="nav nav-tabs" role="tablist">
+  <li class="active"><a href="#">Workout Creator</a></li>
+  <li><a href="#">Analytics</a></li>
+  <li><a href="#">Athlete Profile</a></li>
+<li class="dropdown">
+       <% if defined?(Devise) %>
+        <% if user_signed_in? %>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Account <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><%= link_to "Edit Account", edit_user_registration_path %></li>
+              <li class="divider"></li>
+              <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
+            </ul>
+          </li>
+        <% else %>
+          <li><%= link_to "Login", new_user_session_path %></li>
+          <li><%= link_to "Sign Up", new_user_registration_path %></li>
+        <% end %>
+      <% end %>
+    </ul>
+  </li>
+                      </ul>
+                
+                      
+                        <p></p>
+                   
+<h2>Create Workout For Julia Hawkins</h2>
+              <h3> Event: Long Jump</h3>
+              
+              <table style="width:300px">
+<tr>
+   <th>Exercise</th>
+    <th>Load</th>
+    <th>Sets</th>
+    <th>Reps</th>
+    <th>Tempo</th>
+</tr>
+<tr>
+  <td><input type="text" ></td>
+  <td><input type="text" ></td>    
+  <td><input type="text" ></td>
+   <td><input type="text" ></td>    
+  <td><input type="text" ></td>
+</tr>
+<tr>
+  <td><input type="text" ></td>
+  <td><input type="text" ></td>    
+  <td><input type="text" ></td>
+   <td><input type="text" ></td>    
+  <td><input type="text" ></td>
+</tr>
+<tr>
+  <td><input type="text" ></td>
+  <td><input type="text" ></td>    
+  <td><input type="text" ></td>
+   <td><input type="text" ></td>    
+  <td><input type="text" ></td>
+</tr>
+<tr>
+  <td><input type="text" ></td>
+  <td><input type="text" ></td>    
+  <td><input type="text" ></td>
+   <td><input type="text" ></td>    
+  <td><input type="text" ></td>
+</tr>
+<tr>
+  <td><input type="text" ></td>
+  <td><input type="text" ></td>    
+  <td><input type="text" ></td>
+   <td><input type="text" ></td>    
+  <td><input type="text" ></td>
+</tr>
+<tr>
+  <td><input type="text"></td>
+  <td><input type="text" ></td>    
+  <td><input type="text" ></td>
+   <td><input type="text" ></td>    
+  <td><input type="text" ></td>
+</tr>      
+</table>
+              <br>
+<input class="btn btn-success" type="submit" value="Save and Send to Julia">
+ 
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery Version 1.11.0 -->
+    <script src="js/jquery-1.11.0.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Menu Toggle Script -->
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>

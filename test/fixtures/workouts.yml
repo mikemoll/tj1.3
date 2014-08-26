@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  exercise: MyString
+  load: MyString
+  reps: MyString
+  sets: MyString
+  tempo: MyString
+  set1: MyString
+  set2: MyString
+  set3: MyString
+
+two:
+  exercise: MyString
+  load: MyString
+  reps: MyString
+  sets: MyString
+  tempo: MyString
+  set1: MyString
+  set2: MyString
+  set3: MyString
