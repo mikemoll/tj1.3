@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :workouts
+
   get 'landings/index'
 
   resources :athletes
