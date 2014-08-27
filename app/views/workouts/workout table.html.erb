@@ -1,6 +1,6 @@
 
 <h1>Listing workouts</h1> 
- <%- model_class = Workout -%>
+       <%- model_class = Workout -%>
 <table class="table table-striped">
   <thead>
     <tr>
@@ -9,10 +9,6 @@
       <th><%= model_class.human_attribute_name(:load) %></th>
       <th><%= model_class.human_attribute_name(:sets) %></th>
       <th><%= model_class.human_attribute_name(:reps) %></th>
-      <th><%= model_class.human_attribute_name(:set1) %></th>
-      <th><%= model_class.human_attribute_name(:set) %></th>
-      <th><%= model_class.human_attribute_name(:set) %></th>
-      <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
   <tbody>
@@ -23,9 +19,6 @@
         <td><%= workout.load %></td>
         <td><%= workout.sets %></td>
         <td><%= workout.reps %></td>
-        <td><%= workout.set1 %></td>
-        <td><%= workout.set2 %></td>
-        <td><%= workout.set3 %></td>
         <td>
           <%= link_to workout_path(workout), :class => 'btn btn-xs', :title => "#{ t('.show', :default => t('helpers.links.show')) }" do %>
             <%= glyph 'info-sign' %>
@@ -40,7 +33,7 @@
   </tbody>
 </table>
 
-<%= link_to t('.new', :default => t("helpers.links.new")),
+<%= link_to t('.new', :default => t("helpers.links.new Workout")),
             new_exercise_path,
             :class => 'btn btn-primary' %>
                     </div>
