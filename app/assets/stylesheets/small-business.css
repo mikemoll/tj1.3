@@ -4,9 +4,15 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
+
 body {
     padding-top: 0px; /* Required padding for .navbar-fixed-top. Change if height of navigation changes. */
 background-color: #000;
+}
+
+
+h2 {
+    color: #fff;
 }
 
 .fonts { 
