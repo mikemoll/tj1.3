@@ -15,6 +15,10 @@ class WorkoutsController < ApplicationController
   # GET /workouts/new
   def new
     @workout = Workout.new
+    @workout1 = Workout.new
+    @workout2 = Workout.new
+    @workout3 = Workout.new
+    @workout4 = Workout.new
   end
 
   # GET /workouts/1/edit

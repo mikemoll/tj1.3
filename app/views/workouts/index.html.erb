@@ -100,7 +100,7 @@
 <h2>Create Workout For Julia Hawkins</h2>
               <h3> Event: Long Jump</h3>
               
-              <table style="width:300px">
+              <table class="table table-bordered" style="width:300px">
 <tr>
    <th>Exercise</th>
     <th>Load</th>
@@ -156,7 +156,7 @@
  
         </div>
 
-        
+
 <h1>Listing workouts</h1> 
        <%- model_class = Workout -%>
 <table class="table table-striped">
@@ -192,7 +192,7 @@
 </table>
 
 <%= link_to t('.new', :default => t("helpers.links.new Workout")),
-            new_exercise_path,
+            new_workout_path,
             :class => 'btn btn-primary' %>
                     </div>
                 </div>
