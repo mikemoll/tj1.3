@@ -61,6 +61,7 @@ GEM
     execjs (2.2.1)
     faraday (0.9.0)
       multipart-post (>= 1.2, < 3)
+    flat-ui-rails (0.0.2)
     google-analytics-rails (0.0.6)
     hashie (3.2.0)
     hike (1.2.3)
@@ -224,6 +225,7 @@ DEPENDENCIES
   bundler
   coffee-rails (~> 4.0.0)
   devise!
+  flat-ui-rails
   google-analytics-rails
   jbuilder (~> 2.0)
   jquery-rails

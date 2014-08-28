@@ -46,6 +46,7 @@ gem 'spring',        group: :development
 # gem 'debugger', group: [:development, :test]
 
 gem 'bundler'
+gem "flat-ui-rails"
 
 gem 'validates_formatting_of'
 gem 'tzinfo-data'
