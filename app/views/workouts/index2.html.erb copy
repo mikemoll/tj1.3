@@ -49,8 +49,36 @@
                 <div class="row">
                     <div class="col-lg-12">
                       <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Hide/Reveal Side-Menu</a>
-                <h1>Workout Creator: Julia Hawkins</h1>
-             <h3>TUESDAY 9th September 2014</h3>
+                <h1>Workout Creator</h1>
+                     <ul class="nav nav-tabs" role="tablist">
+  <li class="active"><a href="#">Workout Creator: Julia Hawkins - Long Jump</a></li>
+  <li><a href="#">Analytics</a></li>
+  <li><a href="#">Athlete Profile</a></li>
+<li class="dropdown">
+       <% if defined?(Devise) %>
+        <% if user_signed_in? %>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Account <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><%= link_to "Edit Account", edit_user_registration_path %></li>
+              <li class="divider"></li>
+              <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
+            </ul>
+          </li>
+        <% else %>
+          <li><%= link_to "Login", new_user_session_path %></li>
+          <li><%= link_to "Sign Up", new_user_registration_path %></li>
+        <% end %>
+      <% end %>
+    </ul>
+  </li>
+                      </ul>
+                
+                      
+                        <p></p>
+                   
+<h2>Create Workout For Julia Hawkins</h2>
+              <h3> Event: Long Jump</h3>
               
               <table class="table table-bordered" style="width:300px">
 <tr class="warning">
@@ -103,10 +131,52 @@
   <td><input type="text" ></td>
 </tr>      
 </table>
+<select class="form-control">
+  <option>Julia</option>
+  <option>Steven</option>
+  <option>Andrew</option>
+  <option>Kelsea</option>
+  <option>Brent</option>
+</select>
               <br>
 <input class="btn btn-success" type="submit" value="Save and Send to Julia">
  
         </div>
+
+
+<h1>Listing workouts</h1> 
+       <%- model_class = Workout -%>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th><%= model_class.human_attribute_name(:exercise) %></th>
+      <th><%= model_class.human_attribute_name(:load) %></th>
+      <th><%= model_class.human_attribute_name(:sets) %></th>
+      <th><%= model_class.human_attribute_name(:reps) %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @workouts.each do |workout| %>
+      <tr>
+        <td><%= workout.id %></td>
+        <td><%= workout.exercise %></td>
+        <td><%= workout.load %></td>
+        <td><%= workout.sets %></td>
+        <td><%= workout.reps %></td>
+        <td>
+          <%= link_to workout_path(workout), :class => 'btn btn-xs', :title => "#{ t('.show', :default => t('helpers.links.show')) }" do %>
+            <%= glyph 'info-sign' %>
+            <%= glyph 'pencil' %>
+          <%- end -%>
+          <%= link_to workout_path(workout), :method => :delete, :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) }, :class => 'btn btn-xs', :title => "#{ t('.destroy', :default => t('helpers.links.destroy')) }" do %>
+            <%= glyph 'remove' %>
+          <%- end -%>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
 
 <%= link_to t('.new', :default => t("helpers.links.new Workout")),
             new_workout_path,
